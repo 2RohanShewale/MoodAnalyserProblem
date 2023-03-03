@@ -1,19 +1,20 @@
 using MoodAnalyser;
 namespace MoodAnalyserTest
 {
-    public class Tests
+    public class UnitTest1
     {
-        MoodAnalyzerProblem moodAnalyzer = new MoodAnalyzerProblem();
         [Test]
         public void GivenSadMood_WhenAnalyzed_ShouldReturnSad()
         {
-            string result = moodAnalyzer.AnaylseMood("I Am In Sad Mood.");
+            MoodAnalyzerProblem moodAnalyser = new MoodAnalyzerProblem("I Am In Sad Mood.");
+            string result = moodAnalyser.AnaylseMood();
             Assert.AreEqual(result, "Sad");
         }
         [Test]
         public void GivenHappyMood_WhenAnalyzed_ShouldReturnHappy()
         {
-            string result = moodAnalyzer.AnaylseMood("I Am In Happy Mood.");
+            MoodAnalyzerProblem moodAnalyser = new MoodAnalyzerProblem("I Am In Happy Mood.");
+            string result = moodAnalyser.AnaylseMood();
             Assert.AreEqual(result, "Happy");
         }
 
