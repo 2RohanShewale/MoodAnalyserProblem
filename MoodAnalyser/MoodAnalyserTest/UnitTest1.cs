@@ -39,5 +39,20 @@ namespace MoodAnalyserTest
             }
            
         }
+        [Test]
+        public void GivenEmptyMessage_ThrowMoodAnalysisException()
+        {
+
+            try
+            {
+                MoodAnalyzer moodAnalyser = new MoodAnalyzer("");
+                string result = moodAnalyser.AnaylseMood();
+            }
+            catch (MoodAnalysisException obj)
+            {
+                Assert.AreEqual("Message is empty.", obj.Message);
+            }
+
+        }
     }
 }
