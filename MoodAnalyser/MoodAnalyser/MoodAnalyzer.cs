@@ -28,7 +28,7 @@ namespace MoodAnalyserProblem
             catch (NullReferenceException)
             {
 
-                throw new MoodAnalysisException(MoodAnalysisExceptionType.NullMood, "Message is null.");
+                throw new MoodAnalysisException(MoodAnalysisExceptionType.NullMood, "Message is null");
             }
             
         }

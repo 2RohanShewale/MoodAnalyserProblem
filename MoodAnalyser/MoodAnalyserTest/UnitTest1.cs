@@ -35,7 +35,7 @@ namespace MoodAnalyserTest
             }
             catch (MoodAnalysisException obj)
             {
-                Assert.AreEqual("Message is null.", obj.Message);
+                Assert.AreEqual("Message is null", obj.Message);
             }
            
         }
